@@ -1,0 +1,10 @@
+{
+  "description": "This vibrant and responsive school website for R.K. Children Paradise showcases a nurturing environment for children from Nursery to Class 4, emphasizing holistic development and safety.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
