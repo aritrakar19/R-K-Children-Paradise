@@ -1400,8 +1400,8 @@ function Footer() {
         </div>
 
         <div style={{ borderTop: "1px solid rgba(255,255,255,.08)", paddingTop: 24, display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "space-between", alignItems: "center" }}>
-          <p style={{ fontSize: 13, color: "#4A6580" }}>© 2026 R.K. Children Paradise. All Rights Reserved.</p>
-          <p style={{ fontSize: 13, color: "#4A6580" }}>Made with ❤️ for the children of Payradanga</p>
+          <p style={{ fontSize: 13, color: "#4A6580" }}>© 2026 Sign Art Creations. All Rights Reserved.</p>
+          <p style={{ fontSize: 13, color: "#4A6580" }}>Made with ❤️ for the children of R.K. Children Paradise Payradanga</p>
         </div>
       </div>
     </footer>
