@@ -149,13 +149,13 @@ const NAV = ["Home", "About", "Academics", "Activities", "Facilities", "Gallery"
 
 const STATS = [
   { label: "Happy Students", val: 500, suffix: "+" },
-  { label: "Years of Excellence", val: 10, suffix: "+" },
-  { label: "Qualified Educators", val: 25, suffix: "+" },
-  { label: "Activity Programs", val: 12, suffix: "+" },
+  { label: "Years of Excellence", val: 49, suffix: "+" },
+  { label: "Qualified Educators", val: 10, suffix: "+" },
+  { label: "Activity Programs", val: 10, suffix: "+" },
 ];
 
 const TRUST = [
-  { icon: "🎓", title: "Nursery – Class 4", desc: "Age-appropriate curriculum for every stage" },
+  { icon: "🎓", title: "Nursery – Class 5", desc: "Age-appropriate curriculum for every stage" },
   { icon: "💡", title: "Smart Learning", desc: "Technology-enabled interactive education" },
   { icon: "🌱", title: "Holistic Development", desc: "Academics · Creativity · Physical growth" },
   { icon: "🛡️", title: "Fire Safety Approved", desc: "Certified safe & secure campus" },
@@ -171,14 +171,18 @@ const ABOUT_CHECKS = [
 ];
 
 const JOURNEY = [
-  { level: "Nursery", age: "3–4 yrs", emoji: "🌟", bg: "#FFF4CC", border: "#FECC4C" },
-  { level: "LKG",     age: "4–5 yrs", emoji: "🌸", bg: "#FFE8F0", border: "#F472B6" },
-  { level: "UKG",     age: "5–6 yrs", emoji: "🦋", bg: "#F3F0FF", border: "#A78BFA" },
-  { level: "Class 1", age: "6–7 yrs", emoji: "📚", bg: "#EAF5FF", border: "#60A5FA" },
-  { level: "Class 2", age: "7–8 yrs", emoji: "✏️", bg: "#ECFDF5", border: "#34D399" },
-  { level: "Class 3", age: "8–9 yrs", emoji: "🔭", bg: "#FFF4CC", border: "#FBBF24" },
-  { level: "Class 4", age: "9–10 yrs", emoji: "🏆", bg: "#ECFDF5", border: "#10B981" },
+  { level: "Nursery", age: "3–4 yrs",  emoji: "🌟", bg: "#FFF4CC", border: "#FECC4C" },
+  { level: "LKG",     age: "4–5 yrs",  emoji: "🌸", bg: "#FFE8F0", border: "#F472B6" },
+  { level: "KG1",     age: "5–6 yrs",  emoji: "🦋", bg: "#F3F0FF", border: "#A78BFA" },
+  { level: "KG2",     age: "6–7 yrs",  emoji: "🎨", bg: "#EAF5FF", border: "#60A5FA" },
+  { level: "Class-1", age: "7–8 yrs",  emoji: "📚", bg: "#ECFDF5", border: "#34D399" },
+  { level: "Class-2", age: "8–9 yrs",  emoji: "✏️", bg: "#FFF4CC", border: "#FBBF24" },
+  { level: "Class-3", age: "9–10 yrs", emoji: "🔭", bg: "#EAF5FF", border: "#38BDF8" },
+  { level: "Class-4", age: "10–11 yrs",emoji: "🧩", bg: "#FFE8F0", border: "#F472B6" },
+  { level: "Class-5", age: "11–12 yrs",emoji: "🏆", bg: "#ECFDF5", border: "#10B981" },
 ];
+
+const CLASS_LIST = JOURNEY.map(j => j.level);
 
 const WHY_CARDS = [
   { emoji: "❤️", title: "Caring Environment", desc: "A warm, supportive school where every child feels valued, seen and celebrated every day." },
@@ -199,6 +203,8 @@ const ACTIVITIES = [
   { emoji: "💃", title: "Dance",            desc: "Movement, grace and confidence",          bg: "#FFF4CC", accent: "#F59E0B" },
   { emoji: "🎭", title: "Drama",            desc: "Storytelling and performance arts",       bg: "#EAF5FF", accent: "#3B82F6" },
   { emoji: "⚽", title: "Sports & PT",      desc: "Fitness, teamwork and discipline",        bg: "#ECFDF5", accent: "#10B981" },
+  { emoji: "🥋", title: "Karate",           desc: "Self-defense, focus & discipline",        bg: "#FFF4CC", accent: "#F59E0B" },
+  { emoji: "🧘", title: "Yoga",             desc: "Mindfulness, balance & flexibility",      bg: "#F3F0FF", accent: "#8B5CF6" },
 ];
 
 const SMART_FEATURES = [
@@ -262,7 +268,7 @@ const TESTIMONIALS = [
 ];
 
 const NOTICES = [
-  { date: "10 Sep 2026", cat: "Admissions", catC: "#D97706 bg-amber-50",   title: "Admissions Open 2026–27",            desc: "Open for Nursery to Class 4. Limited seats — enquire today." },
+  { date: "10 Sep 2026", cat: "Admissions", catC: "#D97706 bg-amber-50",   title: "Admissions Open 2026–27",            desc: "Open for Nursery to Class 5. Limited seats — enquire today." },
   { date: "05 Sep 2026", cat: "Events",     catC: "#2563EB bg-blue-50",    title: "Annual Cultural Day — Oct 15",        desc: "Music, dance, drama and celebrations for the whole family." },
   { date: "28 Aug 2026", cat: "Holiday",    catC: "#7C3AED bg-purple-50",  title: "Durga Puja Holiday Notice",           desc: "School closed Oct 1–10. Classes resume Oct 11, 2026." },
   { date: "20 Aug 2026", cat: "Meeting",    catC: "#059669 bg-emerald-50", title: "Parent-Teacher Meeting — Sep 25",     desc: "All parents are warmly requested to attend." },
@@ -444,7 +450,7 @@ function Hero() {
             {/* Top Badges */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 20 }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px", borderRadius: 100, background: "#FFF4CC", fontSize: 13, fontWeight: 800, color: "#173B5E", boxShadow: "0 2px 8px rgba(254,204,76,.2)" }}>
-                <span>☀️</span> Nursery – Class 4
+                <span>☀️</span> Nursery – Class 5
               </div>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "6px 14px", borderRadius: 100, background: "#EAF5FF", fontSize: 13, fontWeight: 800, color: "#173B5E", boxShadow: "0 2px 8px rgba(96,165,250,.15)" }}>
                 <span>🧡</span> Safe · Caring · Progressive
@@ -471,7 +477,7 @@ function Hero() {
 
             {/* Description Paragraph */}
             <p style={{ fontSize: 16, lineHeight: 1.75, color: "#5A6A7A", maxWidth: 520, marginBottom: 28, fontWeight: 500 }}>
-              R.K. Children Paradise provides a joyful, safe and nurturing learning environment where children from Nursery to Class 4 learn, explore, create and grow with confidence.
+              R.K. Children Paradise provides a joyful, safe and nurturing learning environment where children from Nursery to Class 5 learn, explore, create and grow with confidence.
             </p>
 
             {/* CTA Buttons */}
@@ -501,7 +507,7 @@ function Hero() {
                   ⭐
                 </div>
                 <div>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: "#173B5E", lineHeight: 1 }}>10+</div>
+                  <div style={{ fontSize: 22, fontWeight: 900, color: "#173B5E", lineHeight: 1 }}>49+</div>
                   <div style={{ fontSize: 12, fontWeight: 600, color: "#6B7280", marginTop: 3 }}>Years of Excellence</div>
                 </div>
               </div>
@@ -511,7 +517,7 @@ function Hero() {
                   📙
                 </div>
                 <div>
-                  <div style={{ fontSize: 22, fontWeight: 900, color: "#173B5E", lineHeight: 1 }}>12+</div>
+                  <div style={{ fontSize: 22, fontWeight: 900, color: "#173B5E", lineHeight: 1 }}>10+</div>
                   <div style={{ fontSize: 12, fontWeight: 600, color: "#6B7280", marginTop: 3 }}>Activity Programs</div>
                 </div>
               </div>
@@ -646,7 +652,7 @@ function About() {
             <span style={{ color: "#FECC4C" }}>Explore & Grow</span>
           </h2>
           <p style={{ color: "#6B7280", lineHeight: 1.8, fontSize: 15, marginBottom: 12, fontWeight: 500 }}>
-            R.K. Children Paradise is a nurturing school for young learners from Nursery to Class 4 in Payradanga, West Bengal. We combine academic excellence with creative activities, communication skills, technology, sports and physical development.
+            R.K. Children Paradise is a nurturing school for young learners from Nursery to Class 5 in Payradanga, West Bengal. We combine academic excellence with creative activities, communication skills, technology, sports and physical development.
           </p>
           <p style={{ color: "#6B7280", lineHeight: 1.8, fontSize: 15, marginBottom: 28, fontWeight: 500 }}>
             Our dedicated educators create a warm, stimulating environment where curiosity is celebrated and every child is encouraged to discover their unique potential.
@@ -679,29 +685,30 @@ function AcademicJourney() {
         <SectionHead
           label="Our Curriculum"
           heading={<>Learning Begins With <span style={{ color: "#FECC4C" }}>Curiosity</span></>}
-          sub="A carefully designed journey from Nursery to Class 4 — nurturing young minds at every stage of growth."
+          sub="A carefully designed journey from Nursery to Class 5 — nurturing young minds at every stage of growth."
         />
 
         {/* Desktop row */}
         <div className="journey-desktop reveal" style={{ position: "relative" }}>
           <style>{`
             .journey-desktop{ display:none; }
-            @media(min-width:768px){ .journey-desktop{ display:flex; gap:10px; align-items:flex-start; } }
+            @media(min-width:768px){ .journey-desktop{ display:flex; gap:6px; align-items:flex-start; } }
+            @media(min-width:1024px){ .journey-desktop{ gap:8px; } }
             .journey-mobile{ display:flex; flex-direction:column; gap:14px; max-width:340px; margin:0 auto; }
             @media(min-width:768px){ .journey-mobile{ display:none; } }
           `}</style>
 
           {/* Connector line */}
-          <div style={{ position: "absolute", top: 28, left: "5%", right: "5%", height: 3, background: "linear-gradient(90deg,#FECC4C,#F472B6,#A78BFA,#60A5FA,#34D399,#FBBF24,#10B981)", borderRadius: 10, opacity: .5, zIndex: 0 }} />
+          <div style={{ position: "absolute", top: 24, left: "4%", right: "4%", height: 3, background: "linear-gradient(90deg,#FECC4C,#F472B6,#A78BFA,#60A5FA,#34D399,#FBBF24,#38BDF8,#F472B6,#10B981)", borderRadius: 10, opacity: .5, zIndex: 0 }} />
 
           {JOURNEY.map((j, i) => (
-            <div key={i} className="card-lift" style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 1, transitionDelay: `${i * 60}ms` }}>
-              <div style={{ width: 52, height: 52, borderRadius: 16, background: j.bg, border: `3px solid ${j.border}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, marginBottom: 12, boxShadow: `0 6px 18px ${j.border}44` }}>
+            <div key={i} className="card-lift" style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", alignItems: "center", position: "relative", zIndex: 1, transitionDelay: `${i * 50}ms` }}>
+              <div style={{ width: 48, height: 48, borderRadius: 15, background: j.bg, border: `3px solid ${j.border}`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, marginBottom: 12, boxShadow: `0 6px 18px ${j.border}44`, flexShrink: 0 }}>
                 {j.emoji}
               </div>
-              <div style={{ background: "#fff", borderRadius: 16, padding: "12px 8px", textAlign: "center", width: "100%", boxShadow: "0 4px 16px rgba(23,59,94,.08)", border: `1px solid ${j.border}33` }}>
-                <div style={{ fontWeight: 900, fontSize: 13, color: "#173B5E", marginBottom: 2 }}>{j.level}</div>
-                <div style={{ fontSize: 11, fontWeight: 600, color: "#9CA3AF" }}>{j.age}</div>
+              <div style={{ background: "#fff", borderRadius: 16, padding: "10px 4px", textAlign: "center", width: "100%", boxShadow: "0 4px 16px rgba(23,59,94,.08)", border: `1px solid ${j.border}33` }}>
+                <div style={{ fontWeight: 900, fontSize: 13, color: "#173B5E", marginBottom: 2, whiteSpace: "nowrap" }}>{j.level}</div>
+                <div style={{ fontSize: 11, fontWeight: 600, color: "#9CA3AF", whiteSpace: "nowrap" }}>{j.age}</div>
               </div>
             </div>
           ))}
@@ -1097,7 +1104,7 @@ function AdmissionCTA() {
           Give Your Child a Joyful Start to Learning
         </h2>
         <p className="reveal" style={{ fontSize: 15, color: "#173B5E", opacity: .7, marginBottom: 28, fontWeight: 600 }}>
-          Admissions open for Nursery to Class 4. Limited seats — enquire today.
+          Admissions open for Nursery to Class 5. Limited seats — enquire today.
         </p>
         <div className="reveal" style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           <a href="#admissions" className="btn-navy">Enquire for Admission <Ic.ArrowRight /></a>
@@ -1112,17 +1119,59 @@ function AdmissionCTA() {
    ADMISSION FORM
 ═══════════════════════════════════════════════════════════════ */
 function AdmissionForm() {
-  type Form = { parent: string; phone: string; email: string; child: string; current: string; applying: string; msg: string };
-  const blank: Form = { parent: "", phone: "", email: "", child: "", current: "", applying: "", msg: "" };
+  type Form = {
+    child: string;
+    dob: string;
+    applying: string;
+    current: string;
+    parent: string;
+    phone: string;
+    email: string;
+    address: string;
+    msg: string;
+  };
+  const blank: Form = {
+    child: "",
+    dob: "",
+    applying: "",
+    current: "",
+    parent: "",
+    phone: "",
+    email: "",
+    address: "",
+    msg: "",
+  };
   const [form, setForm] = useState<Form>(blank);
   const [done, setDone] = useState(false);
-  const set = (k: keyof Form) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) =>
-    setForm(f => ({ ...f, [k]: e.target.value }));
+  const set = (k: keyof Form) => (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
+  ) => setForm(f => ({ ...f, [k]: e.target.value }));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const message = `Hello, I would like to enquire about admission.
+
+Student Name: ${form.child}
+Date of Birth: ${form.dob}
+Applying For: ${form.applying}
+Current Class: ${form.current || "N/A"}
+Parent/Guardian Name: ${form.parent}
+Phone Number: ${form.phone}
+Email: ${form.email || "N/A"}
+Address: ${form.address}
+Message: ${form.msg || "N/A"}
+
+Please contact me regarding the admission process.`;
+
+    const whatsappUrl = `https://wa.me/919433176984?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+
     setDone(true);
-    setTimeout(() => { setDone(false); setForm(blank); }, 5000);
+    setTimeout(() => {
+      setDone(false);
+      setForm(blank);
+    }, 5000);
   };
 
   return (
@@ -1146,31 +1195,61 @@ function AdmissionForm() {
         ) : (
           <form onSubmit={handleSubmit} className="reveal" style={{ background: "#fff", borderRadius: 24, padding: "clamp(20px,4vw,40px)", boxShadow: "var(--shadow-lg)" }}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,220px),1fr))", gap: "16px 18px" }}>
-              {[
-                { label: "Parent / Guardian Name *", key: "parent" as const, ph: "Your full name", type: "text", req: true },
-                { label: "Phone Number *",            key: "phone"  as const, ph: "+91 94331 76984", type: "tel",  req: true },
-                { label: "Email Address",              key: "email"  as const, ph: "your@email.com", type: "email", req: false },
-                { label: "Child's Name *",             key: "child"  as const, ph: "Child's full name", type: "text", req: true },
-              ].map(({ label, key, ph, type, req }) => (
-                <div key={key}>
-                  <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>{label}</label>
-                  <input required={req} type={type} className="form-input" placeholder={ph} value={form[key]} onChange={set(key)} />
-                </div>
-              ))}
+              {/* 1. Student Name */}
+              <div>
+                <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Child's Name *</label>
+                <input required type="text" className="form-input" placeholder="Child's full name" value={form.child} onChange={set("child")} />
+              </div>
 
-              {[
-                { label: "Current Class", key: "current" as const, opts: ["Not yet in school", "Nursery", "LKG", "UKG", "Class 1", "Class 2", "Class 3"] },
-                { label: "Applying For *", key: "applying" as const, opts: ["Nursery", "LKG", "UKG", "Class 1", "Class 2", "Class 3", "Class 4"] },
-              ].map(({ label, key, opts }) => (
-                <div key={key}>
-                  <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>{label}</label>
-                  <select required={key === "applying"} className="form-input" style={{ appearance: "none", backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%236B7280' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 14px center", paddingRight: 40 }} value={form[key]} onChange={set(key)}>
-                    <option value="">Select...</option>
-                    {opts.map(o => <option key={o}>{o}</option>)}
-                  </select>
-                </div>
-              ))}
+              {/* 2. Date of Birth */}
+              <div>
+                <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Date of Birth *</label>
+                <input required type="date" className="form-input" style={{ colorScheme: "light" }} value={form.dob} onChange={set("dob")} />
+              </div>
 
+              {/* 3. Applying For */}
+              <div>
+                <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Applying For *</label>
+                <select required className="form-input" style={{ appearance: "none", backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%236B7280' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 14px center", paddingRight: 40 }} value={form.applying} onChange={set("applying")}>
+                  <option value="">Select Class...</option>
+                  {CLASS_LIST.map(o => <option key={o} value={o}>{o}</option>)}
+                </select>
+              </div>
+
+              {/* 4. Current Class */}
+              <div>
+                <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Current Class</label>
+                <select className="form-input" style={{ appearance: "none", backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%236B7280' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 14px center", paddingRight: 40 }} value={form.current} onChange={set("current")}>
+                  <option value="">Select...</option>
+                  {["Not yet in school", ...CLASS_LIST].map(o => <option key={o} value={o}>{o}</option>)}
+                </select>
+              </div>
+
+              {/* 5. Parent Name */}
+              <div>
+                <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Parent / Guardian Name *</label>
+                <input required type="text" className="form-input" placeholder="Your full name" value={form.parent} onChange={set("parent")} />
+              </div>
+
+              {/* 6. Phone Number */}
+              <div>
+                <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Phone Number *</label>
+                <input required type="tel" className="form-input" placeholder="+91 94331 76984" value={form.phone} onChange={set("phone")} />
+              </div>
+
+              {/* 7. Email Address */}
+              <div style={{ gridColumn: "1 / -1" }}>
+                <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Email Address</label>
+                <input type="email" className="form-input" placeholder="your@email.com" value={form.email} onChange={set("email")} />
+              </div>
+
+              {/* 8. Address */}
+              <div style={{ gridColumn: "1 / -1" }}>
+                <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Address *</label>
+                <textarea required rows={3} className="form-input" style={{ resize: "none", lineHeight: 1.6 }} placeholder="Complete residential address..." value={form.address} onChange={set("address")} />
+              </div>
+
+              {/* 9. Message */}
               <div style={{ gridColumn: "1 / -1" }}>
                 <label style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#173B5E", marginBottom: 6 }}>Message (Optional)</label>
                 <textarea rows={3} className="form-input" style={{ resize: "none", lineHeight: 1.6 }} placeholder="Any questions or additional information..." value={form.msg} onChange={set("msg")} />
@@ -1329,7 +1408,7 @@ function Contact() {
 ═══════════════════════════════════════════════════════════════ */
 function Footer() {
   const quick = ["Home", "About", "Academics", "Activities", "Gallery", "Admissions", "Contact"];
-  const school = ["Nursery – Class 4", "Smart Classroom", "Activities", "Safety"];
+  const school = ["Nursery – Class 5", "Smart Classroom", "Activities", "Safety"];
 
   return (
     <footer style={{ background: "#102F4A" }}>
@@ -1346,7 +1425,7 @@ function Footer() {
               </div>
             </div>
             <p style={{ fontSize: 13, color: "#6B8FAA", lineHeight: 1.7, marginBottom: 20, fontWeight: 500 }}>
-              A joyful, safe and nurturing learning environment for children from Nursery to Class 4 in Payradanga, West Bengal.
+              A joyful, safe and nurturing learning environment for children from Nursery to Class 5 in Payradanga, West Bengal.
             </p>
             <div style={{ display: "flex", gap: 8 }}>
               {["📘", "📸", "🐦", "▶️"].map((ic, i) => (
