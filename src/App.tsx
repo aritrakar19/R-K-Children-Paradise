@@ -1352,7 +1352,7 @@ function Contact() {
   const info = [
     { icon: <Ic.Pin />,   label: "Address",      val: "Payradanga, West Bengal, India" },
     { icon: <Ic.Phone />, label: "Phone",         val: "+91 9433176984" },
-    { icon: <Ic.Mail />,  label: "Email",         val: "info@rkchildrenparadise.edu.in" },
+    { icon: <Ic.Mail />,  label: "Email",         val: "rkchildrenparadise@gmail.com" },
     { icon: <Ic.Clock />, label: "School Hours",  val: "Mon – Sat: 8:00 AM – 2:00 PM" },
   ];
 
@@ -1366,7 +1366,7 @@ function Contact() {
         <div className="reveal">
           <div style={{ background: "#FFF9ED", borderRadius: 24, padding: "28px 24px", boxShadow: "var(--shadow-card)", marginBottom: 16 }}>
             <h3 style={{ fontWeight: 900, fontSize: 20, color: "#173B5E", marginBottom: 4 }}>R.K. Children Paradise</h3>
-            <p style={{ fontSize: 14, color: "#9CA3AF", marginBottom: 24, fontWeight: 500 }}>Nurturing young minds from Nursery to Class 4.</p>
+            <p style={{ fontSize: 14, color: "#9CA3AF", marginBottom: 24, fontWeight: 500 }}>Nurturing young minds from Nursery to Class 5.</p>
             <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
               {info.map((it, i) => (
                 <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
@@ -1383,19 +1383,46 @@ function Contact() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
             <a href="#admissions" className="btn-primary" style={{ justifyContent: "center", fontSize: 13, padding: "12px 16px" }}>Admission Enquiry</a>
-            <button className="btn-outline" style={{ fontSize: 13, padding: "11px 16px", justifyContent: "center" }}>Get Directions</button>
+            <a href="https://maps.app.goo.gl/LMPDfwXcgjqFSiVz7" target="_blank" rel="noopener noreferrer" className="btn-outline" style={{ fontSize: 13, padding: "11px 16px", justifyContent: "center" }}>Get Directions</a>
           </div>
         </div>
 
-        {/* Map placeholder */}
-        <div className="reveal reveal-delay-2" style={{ borderRadius: 28, overflow: "hidden", boxShadow: "var(--shadow-lg)", minHeight: 400, background: "#EAF5FF", position: "relative", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: 16 }}>
-          {/* Grid pattern */}
-          <div style={{ position: "absolute", inset: 0, backgroundImage: "linear-gradient(rgba(23,59,94,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(23,59,94,.06) 1px,transparent 1px)", backgroundSize: "40px 40px" }} />
-          <div style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
-            <div style={{ fontSize: 56, marginBottom: 12 }}>📍</div>
-            <div style={{ fontWeight: 900, fontSize: 18, color: "#173B5E" }}>Payradanga, West Bengal</div>
-            <div style={{ fontSize: 13, color: "#6B7280", marginTop: 4, marginBottom: 20, fontWeight: 500 }}>R.K. Children Paradise</div>
-            <button className="btn-navy" style={{ fontSize: 13, padding: "11px 22px" }}>Open in Google Maps <Ic.ArrowRight /></button>
+        {/* Location Box with Embedded Map */}
+        <div className="reveal reveal-delay-2" style={{ borderRadius: 28, overflow: "hidden", boxShadow: "var(--shadow-lg)", background: "#EAF5FF", position: "relative", display: "flex", flexDirection: "column", border: "1px solid rgba(23,59,94,.08)" }}>
+          {/* Top Location Info */}
+          <div style={{ background: "#fff", padding: "16px 20px", display: "flex", alignItems: "center", gap: 12, borderBottom: "1px solid rgba(23,59,94,.08)", zIndex: 2 }}>
+            <div style={{ width: 40, height: 40, borderRadius: 12, background: "#FFF4CC", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>
+              📍
+            </div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontWeight: 900, fontSize: 16, color: "#173B5E", lineHeight: 1.2 }}>R.K. Children Paradise</div>
+              <div style={{ fontSize: 12, fontWeight: 600, color: "#6B7280", marginTop: 2 }}>Payradanga, West Bengal</div>
+            </div>
+          </div>
+
+          {/* Embedded Map */}
+          <div style={{ flex: 1, minHeight: 300, width: "100%", position: "relative", background: "#EAF5FF" }}>
+            <iframe
+              title="R.K. Children Paradise Location Map"
+              src="https://maps.google.com/maps?q=R.K.+Children+Paradise,+Payradanga,+West+Bengal&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              style={{ width: "100%", height: "100%", minHeight: 300, border: 0, display: "block" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          {/* Bottom Action */}
+          <div style={{ background: "#fff", padding: "14px 20px", borderTop: "1px solid rgba(23,59,94,.08)", textAlign: "center", zIndex: 2 }}>
+            <a
+              href="https://maps.app.goo.gl/LMPDfwXcgjqFSiVz7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-navy"
+              style={{ fontSize: 13, padding: "11px 22px", display: "inline-flex", width: "100%", justifyContent: "center" }}
+            >
+              Open in Google Maps <Ic.ArrowRight />
+            </a>
           </div>
         </div>
       </div>
@@ -1468,7 +1495,7 @@ function Footer() {
             {[
               { icon: <Ic.Pin />, v: "Payradanga, West Bengal, India" },
               { icon: <Ic.Phone />, v: "+91 9433176984" },
-              { icon: <Ic.Mail />, v: "info@rkchildrenparadise.edu.in" },
+              { icon: <Ic.Mail />, v: "rkchildrenparadise@gmail.com" },
             ].map((c, i) => (
               <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 12, color: "#6B8FAA" }}>
                 <span style={{ marginTop: 1, flexShrink: 0 }}>{c.icon}</span>
