@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import heroImg from "./assets/hero-classroom.jpg";
+import heroImg from "./assets/hero_section_photo.jpeg";
+import about1Img from "./assets/about_1.jpeg";
+import about2Img from "./assets/about_2.jpeg";
+import about3Img from "./assets/about_3.jpeg";
+import smartLearningImg from "./assets/Smart_Learning.jpeg";
 
 /* ═══════════════════════════════════════════════════════════════
    ICONS
@@ -626,18 +630,18 @@ function About() {
         <div className="reveal" style={{ position: "relative" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gridTemplateRows: "auto auto", gap: 14 }}>
             <div className="img-zoom" style={{ gridColumn: "1 / -1", borderRadius: 24, overflow: "hidden", aspectRatio: "16/8" }}>
-              <img src="https://images.unsplash.com/photo-1692609659165-1ec4d8108c0e?w=800&h=400&fit=crop&auto=format" alt="Children at school" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={about1Img} alt="Children at school" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
             <div className="img-zoom" style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1/1" }}>
-              <img src="https://images.unsplash.com/photo-1692269725911-87697c558be1?w=400&h=400&fit=crop&auto=format" alt="Students learning" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={about2Img} alt="Students learning" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
             <div className="img-zoom" style={{ borderRadius: 24, overflow: "hidden", aspectRatio: "1/1" }}>
-              <img src="https://images.unsplash.com/photo-1617117206620-b01f2919ff86?w=400&h=400&fit=crop&auto=format" alt="Art activity" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={about3Img} alt="Art activity" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
           </div>
           {/* Accent badge */}
           <div style={{ position: "absolute", top: 16, right: 16, background: "#fff", borderRadius: 18, padding: "12px 18px", boxShadow: "0 8px 24px rgba(23,59,94,.15)", textAlign: "center" }}>
-            <div style={{ fontSize: 26, fontWeight: 900, color: "#FECC4C" }}>10+</div>
+            <div style={{ fontSize: 26, fontWeight: 900, color: "#FECC4C" }}>49+</div>
             <div style={{ fontSize: 11, fontWeight: 700, color: "#173B5E", lineHeight: 1.3 }}>Years of<br/>Excellence</div>
           </div>
           {/* Deco blob behind */}
@@ -809,7 +813,7 @@ function SmartClassroom() {
         {/* Image */}
         <div className="reveal" style={{ position: "relative" }}>
           <div className="img-zoom" style={{ borderRadius: 28, overflow: "hidden", boxShadow: "0 24px 60px rgba(23,59,94,.18)", aspectRatio: "4/3" }}>
-            <img src="https://images.unsplash.com/photo-1727473704274-3fbad0dbbd60?w=760&h=570&fit=crop&auto=format" alt="Smart classroom" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            <img src={smartLearningImg} alt="Smart classroom" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(23,59,94,.45) 0%,transparent 65%)" }} />
           </div>
           <div style={{ position: "absolute", bottom: 16, left: 16, background: "rgba(255,255,255,.95)", backdropFilter: "blur(8px)", borderRadius: 16, padding: "10px 16px", display: "flex", alignItems: "center", gap: 10, boxShadow: "0 8px 24px rgba(23,59,94,.15)", maxWidth: "calc(100% - 32px)" }}>
