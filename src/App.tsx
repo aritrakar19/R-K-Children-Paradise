@@ -10,11 +10,12 @@ import sportsDayImg from "./assets/sports_day.jpeg";
 import musicDanceImg from "./assets/music&dance.jpg";
 import groupReadingImg from "./assets/group_reading.jpeg";
 import culturalEventsImg from "./assets/cultural_events.jpg";
+import sportsPtImg from "./assets/sports&pt.png";
 import gallery1Img from "./assets/gallery_1.jpeg";
 import gallery2Img from "./assets/gallery_2.jpg";
 import gallery3Img from "./assets/gallery_3.jpeg";
 import gallery4Img from "./assets/gallery_4.jpg";
-import gallery5Img from "./assets/gallery_5.jpeg";
+import gallery5Img from "./assets/gallery_49.png";
 import gallery6Img from "./assets/gallery_6.jpeg";
 import gallery7Img from "./assets/gallery_7.jpeg";
 import gallery8Img from "./assets/gallery_8.jpeg";
@@ -1013,7 +1014,7 @@ function Sports() {
 
           <div className="reveal reveal-delay-2" style={{ position: "relative" }}>
             <div className="img-zoom" style={{ borderRadius: 28, overflow: "hidden", boxShadow: "0 24px 60px rgba(0,0,0,.35)", aspectRatio: "4/3" }}>
-              <img src="https://images.unsplash.com/photo-1763639700458-38a0fd25335d?w=760&h=570&fit=crop&auto=format" alt="Children playing sports at school" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <img src={sportsPtImg} alt="Sports and PT activities at R.K. Children Paradise" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
             </div>
             <div className="float-1" style={{ position: "absolute", bottom: -12, left: -8, background: "#FECC4C", borderRadius: 16, padding: "12px 16px", boxShadow: "0 10px 28px rgba(254,204,76,.4)", maxWidth: "calc(100% - 16px)" }}>
               <div style={{ fontSize: 22 }}>⚽🏃🎽</div>
