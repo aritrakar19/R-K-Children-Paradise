@@ -4,6 +4,60 @@ import about1Img from "./assets/about_1.jpeg";
 import about2Img from "./assets/about_2.jpeg";
 import about3Img from "./assets/about_3.jpeg";
 import smartLearningImg from "./assets/Smart_Learning.jpeg";
+import classroomLearningImg from "./assets/classroom_learning.png";
+import artActivitiesImg from "./assets/art_activities.png";
+import sportsDayImg from "./assets/sports_day.jpeg";
+import musicDanceImg from "./assets/music&dance.jpg";
+import groupReadingImg from "./assets/group_reading.jpeg";
+import culturalEventsImg from "./assets/cultural_events.jpg";
+import gallery1Img from "./assets/gallery_1.jpeg";
+import gallery2Img from "./assets/gallery_2.jpg";
+import gallery3Img from "./assets/gallery_3.jpeg";
+import gallery4Img from "./assets/gallery_4.jpg";
+import gallery5Img from "./assets/gallery_5.jpeg";
+import gallery6Img from "./assets/gallery_6.jpeg";
+import gallery7Img from "./assets/gallery_7.jpeg";
+import gallery8Img from "./assets/gallery_8.jpeg";
+import gallery9Img from "./assets/gallery_9.jpeg";
+import gallery10Img from "./assets/gallery_10.jpeg";
+import gallery11Img from "./assets/gallery_11.jpg";
+import gallery12Img from "./assets/gallery_12.jpg";
+import gallery13Img from "./assets/gallery_13.jpg";
+import gallery14Img from "./assets/gallery_14.jpg";
+import gallery15Img from "./assets/gallery_15.jpg";
+import gallery16Img from "./assets/gallery_16.jpg";
+import gallery17Img from "./assets/gallery_17.jpg";
+import gallery18Img from "./assets/gallery_18.jpg";
+import gallery19Img from "./assets/gallery_19.jpg";
+import gallery20Img from "./assets/gallery_20.jpg";
+import gallery21Img from "./assets/gallery_21.jpg";
+import gallery22Img from "./assets/gallery_22.jpg";
+import gallery23Img from "./assets/gallery_23.jpg";
+import gallery24Img from "./assets/gallery_24.jpg";
+import gallery25Img from "./assets/gallery_25.jpg";
+import gallery26Img from "./assets/gallery_26.jpg";
+import gallery27Img from "./assets/gallery_27.jpg";
+import gallery28Img from "./assets/gallery_28.jpg";
+import gallery29Img from "./assets/gallery_29.jpg";
+import gallery30Img from "./assets/gallery_30.jpg";
+import gallery31Img from "./assets/gallery_31.jpg";
+import gallery32Img from "./assets/gallery_32.jpg";
+import gallery33Img from "./assets/gallery_33.jpg";
+import gallery34Img from "./assets/gallery_34.jpeg";
+import gallery35Img from "./assets/gallery_35.jpeg";
+import gallery36Img from "./assets/gallery_36.jpeg";
+import gallery37Img from "./assets/gallery_37.jpeg";
+import gallery38Img from "./assets/gallery_38.jpeg";
+import gallery39Img from "./assets/gallery_39.jpeg";
+import gallery40Img from "./assets/gallery_40.jpeg";
+import gallery41Img from "./assets/gallery_41.jpeg";
+import gallery42Img from "./assets/gallery_42.jpeg";
+import gallery43Img from "./assets/gallery_43.jpeg";
+import gallery44Img from "./assets/gallery_44.jpeg";
+import gallery45Img from "./assets/gallery_45.jpeg";
+import gallery46Img from "./assets/gallery_46.jpeg";
+import gallery47Img from "./assets/gallery_47.jpeg";
+import gallery48Img from "./assets/gallery_48.jpeg";
 
 /* ═══════════════════════════════════════════════════════════════
    ICONS
@@ -243,26 +297,67 @@ const TEACHERS = [
 ];
 
 const SCHOOL_LIFE = [
-  { label: "Classroom Learning",  img: "https://images.unsplash.com/photo-1692269725836-fbd72e98883f?w=560&h=380&fit=crop&auto=format" },
-  { label: "Art Activities",      img: "https://images.unsplash.com/photo-1617117206620-b01f2919ff86?w=560&h=380&fit=crop&auto=format" },
-  { label: "Sports Day",          img: "https://images.unsplash.com/photo-1763639700458-38a0fd25335d?w=560&h=380&fit=crop&auto=format" },
-  { label: "Music & Dance",       img: "https://images.unsplash.com/photo-1667386427340-ea2cbca9ad01?w=560&h=380&fit=crop&auto=format" },
-  { label: "Group Reading",       img: "https://images.unsplash.com/photo-1692269725911-87697c558be1?w=560&h=380&fit=crop&auto=format" },
-  { label: "Cultural Events",     img: "https://images.unsplash.com/photo-1667384443065-b15c7caa4160?w=560&h=380&fit=crop&auto=format" },
+  { label: "Classroom Learning",  img: classroomLearningImg },
+  { label: "Art Activities",      img: artActivitiesImg },
+  { label: "Sports Day",          img: sportsDayImg },
+  { label: "Music & Dance",       img: musicDanceImg },
+  { label: "Group Reading",       img: groupReadingImg },
+  { label: "Cultural Events",     img: culturalEventsImg },
 ];
 
 const GALLERY_ITEMS = [
-  { img: "https://images.unsplash.com/photo-1692269725836-fbd72e98883f?w=660&h=440&fit=crop&auto=format", cat: "Classroom", label: "Young learners in class" },
-  { img: "https://images.unsplash.com/photo-1617117206620-b01f2919ff86?w=440&h=440&fit=crop&auto=format", cat: "Arts",      label: "Art & drawing session" },
-  { img: "https://images.unsplash.com/photo-1772946277876-98ac6a2036ee?w=440&h=440&fit=crop&auto=format", cat: "Sports",    label: "Sports day fun" },
-  { img: "https://images.unsplash.com/photo-1667386427340-ea2cbca9ad01?w=660&h=440&fit=crop&auto=format", cat: "Arts",      label: "Dance performance" },
-  { img: "https://images.unsplash.com/photo-1692269725911-87697c558be1?w=440&h=440&fit=crop&auto=format", cat: "Classroom", label: "Reading together" },
-  { img: "https://images.unsplash.com/photo-1692269725827-699e04a11cdf?w=660&h=440&fit=crop&auto=format", cat: "Classroom", label: "Classroom activity" },
-  { img: "https://images.unsplash.com/photo-1667384443065-b15c7caa4160?w=440&h=440&fit=crop&auto=format", cat: "Events",    label: "Cultural performance" },
-  { img: "https://images.unsplash.com/photo-1763639700458-38a0fd25335d?w=440&h=440&fit=crop&auto=format", cat: "Sports",    label: "Outdoor activities" },
-  { img: "https://images.unsplash.com/photo-1560421683-6856ea585c78?w=660&h=440&fit=crop&auto=format",   cat: "Arts",      label: "Creative art work" },
+  { img: gallery1Img, label: "Gallery Photo 1" },
+  { img: gallery2Img, label: "Gallery Photo 2" },
+  { img: gallery3Img, label: "Gallery Photo 3" },
+  { img: gallery4Img, label: "Gallery Photo 4" },
+  { img: gallery5Img, label: "Gallery Photo 5" },
 ];
-const GALLERY_CATS = ["All", "Classroom", "Arts", "Sports", "Events"];
+
+const ALL_GALLERY_PHOTOS = [
+  { img: gallery6Img, label: "Gallery Photo 6" },
+  { img: gallery7Img, label: "Gallery Photo 7" },
+  { img: gallery8Img, label: "Gallery Photo 8" },
+  { img: gallery9Img, label: "Gallery Photo 9" },
+  { img: gallery10Img, label: "Gallery Photo 10" },
+  { img: gallery11Img, label: "Gallery Photo 11" },
+  { img: gallery12Img, label: "Gallery Photo 12" },
+  { img: gallery13Img, label: "Gallery Photo 13" },
+  { img: gallery14Img, label: "Gallery Photo 14" },
+  { img: gallery15Img, label: "Gallery Photo 15" },
+  { img: gallery16Img, label: "Gallery Photo 16" },
+  { img: gallery17Img, label: "Gallery Photo 17" },
+  { img: gallery18Img, label: "Gallery Photo 18" },
+  { img: gallery19Img, label: "Gallery Photo 19" },
+  { img: gallery20Img, label: "Gallery Photo 20" },
+  { img: gallery21Img, label: "Gallery Photo 21" },
+  { img: gallery22Img, label: "Gallery Photo 22" },
+  { img: gallery23Img, label: "Gallery Photo 23" },
+  { img: gallery24Img, label: "Gallery Photo 24" },
+  { img: gallery25Img, label: "Gallery Photo 25" },
+  { img: gallery26Img, label: "Gallery Photo 26" },
+  { img: gallery27Img, label: "Gallery Photo 27" },
+  { img: gallery28Img, label: "Gallery Photo 28" },
+  { img: gallery29Img, label: "Gallery Photo 29" },
+  { img: gallery30Img, label: "Gallery Photo 30" },
+  { img: gallery31Img, label: "Gallery Photo 31" },
+  { img: gallery32Img, label: "Gallery Photo 32" },
+  { img: gallery33Img, label: "Gallery Photo 33" },
+  { img: gallery34Img, label: "Gallery Photo 34" },
+  { img: gallery35Img, label: "Gallery Photo 35" },
+  { img: gallery36Img, label: "Gallery Photo 36" },
+  { img: gallery37Img, label: "Gallery Photo 37" },
+  { img: gallery38Img, label: "Gallery Photo 38" },
+  { img: gallery39Img, label: "Gallery Photo 39" },
+  { img: gallery40Img, label: "Gallery Photo 40" },
+  { img: gallery41Img, label: "Gallery Photo 41" },
+  { img: gallery42Img, label: "Gallery Photo 42" },
+  { img: gallery43Img, label: "Gallery Photo 43" },
+  { img: gallery44Img, label: "Gallery Photo 44" },
+  { img: gallery45Img, label: "Gallery Photo 45" },
+  { img: gallery46Img, label: "Gallery Photo 46" },
+  { img: gallery47Img, label: "Gallery Photo 47" },
+  { img: gallery48Img, label: "Gallery Photo 48" },
+];
 
 const TESTIMONIALS = [
   { name: "Ananya Bose",        child: "Parent — Nursery",  q: "My daughter looks forward to school every single day. The teachers are so warm and caring. She has blossomed into a confident, happy little learner since joining R.K. Children Paradise." },
@@ -297,7 +392,7 @@ function Section({
 
 function SectionHead({ label, heading, sub, light = false }: { label?: string; heading: React.ReactNode; sub?: string; light?: boolean }) {
   return (
-    <div style={{ textAlign: "center", marginBottom: 48 }} className="reveal">
+    <div style={{ textAlign: "center", marginBottom: 48 }} className="reveal visible">
       {label && <div className="section-label" style={light ? { background: "rgba(254,204,76,.18)", color: "#FECC4C" } : {}}>{label}</div>}
       <h2 style={{ fontSize: "clamp(1.5rem,3.5vw,2.6rem)", color: light ? "#fff" : "#173B5E", marginBottom: 12 }}>{heading}</h2>
       {sub && <p style={{ color: light ? "#94B8D4" : "#6B7280", maxWidth: 560, margin: "0 auto", lineHeight: 1.7, fontSize: 15, fontWeight: 500 }}>{sub}</p>}
@@ -1040,44 +1135,225 @@ function SchoolLifeSection() {
    GALLERY
 ═══════════════════════════════════════════════════════════════ */
 function Gallery() {
-  const [cat, setCat] = useState("All");
-  const items = cat === "All" ? GALLERY_ITEMS : GALLERY_ITEMS.filter(g => g.cat === cat);
+  const [showFullGallery, setShowFullGallery] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedImage(null);
+    };
+    if (selectedImage) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImage]);
 
   return (
     <Section id="gallery" bg="#fff">
       <SectionHead
         label="Photo Gallery"
         heading={<>Moments That Make <span style={{ color: "#FECC4C" }}>Childhood Special</span></>}
+        sub="Explore glimpses of joyful learning, creative activities, sports, and memorable events at R.K. Children Paradise."
       />
-      {/* Filter buttons */}
-      <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 28, flexWrap: "wrap" }} className="reveal">
-        {GALLERY_CATS.map(c => (
-          <button key={c} onClick={() => setCat(c)}
-            style={{ padding: "7px 18px", borderRadius: 100, fontSize: 13, fontWeight: 800, border: "2px solid", borderColor: cat === c ? "#FECC4C" : "#E5E7EB", background: cat === c ? "#FECC4C" : "#fff", color: cat === c ? "#173B5E" : "#6B7280", cursor: "pointer", transition: "all .2s" }}>
-            {c}
-          </button>
-        ))}
-      </div>
 
-      {/* Masonry-inspired grid */}
-      <div style={{ columns: "var(--gallery-cols,2)", columnGap: 14 }}>
+      {/* Balanced 3-column photo grid */}
+      <div style={{
+        display: "flex",
+        flexWrap: "wrap",
+        gap: 16,
+        justifyContent: "center",
+        width: "100%",
+        maxWidth: 1280,
+        margin: "0 auto"
+      }}>
         <style>{`
-          :root{ --gallery-cols:2; }
-          @media(min-width:640px){ :root{ --gallery-cols:3; } }
-          @media(min-width:1024px){ :root{ --gallery-cols:4; } }
+          .gallery-card-item {
+            flex: 1 1 calc(33.333% - 12px);
+            max-width: calc(33.333% - 11px);
+            min-width: 280px;
+          }
+          @media (max-width: 900px) {
+            .gallery-card-item {
+              flex: 1 1 calc(50% - 10px);
+              max-width: calc(50% - 10px);
+              min-width: 240px;
+            }
+          }
+          @media (max-width: 560px) {
+            .gallery-card-item {
+              flex: 1 1 100%;
+              max-width: 100%;
+              min-width: 100%;
+            }
+          }
         `}</style>
-        {items.map((g, i) => (
-          <div key={`${cat}-${i}`} className="gallery-item img-zoom" style={{ breakInside: "avoid", marginBottom: 14, borderRadius: 18, overflow: "hidden", position: "relative", boxShadow: "0 4px 16px rgba(23,59,94,.08)" }}>
-            <img src={g.img} alt={g.label} style={{ width: "100%", display: "block" }} />
-            <div className="overlay" style={{ position: "absolute", inset: 0, background: "linear-gradient(to top,rgba(23,59,94,.80) 0%,transparent 55%)", display: "flex", alignItems: "flex-end", padding: "14px 14px" }}>
-              <div>
-                <div style={{ fontSize: 11, fontWeight: 800, color: "#FECC4C", marginBottom: 3, textTransform: "uppercase", letterSpacing: ".06em" }}>{g.cat}</div>
-                <div style={{ fontWeight: 700, fontSize: 13, color: "#fff" }}>{g.label}</div>
-              </div>
-            </div>
+        {GALLERY_ITEMS.map((g, i) => (
+          <div
+            key={i}
+            onClick={() => setSelectedImage(g.img)}
+            className="gallery-item img-zoom gallery-card-item"
+            style={{
+              borderRadius: 18,
+              overflow: "hidden",
+              position: "relative",
+              boxShadow: "0 4px 16px rgba(23,59,94,.08)",
+              aspectRatio: "4/3",
+              cursor: "pointer"
+            }}
+          >
+            <img src={g.img} alt="Gallery photo" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </div>
         ))}
       </div>
+
+      {/* View All Photos Button */}
+      <div style={{ textAlign: "center", marginTop: 32 }}>
+        <button
+          onClick={() => setShowFullGallery(true)}
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 10,
+            padding: "12px 30px",
+            borderRadius: 100,
+            background: "#173B5E",
+            color: "#fff",
+            fontWeight: 700,
+            fontSize: 14,
+            border: "none",
+            cursor: "pointer",
+            boxShadow: "0 6px 20px rgba(23,59,94,.18)",
+            transition: "all .2s ease"
+          }}
+        >
+          <span>View All Photos</span>
+          <Ic.ArrowRight size={16} />
+        </button>
+      </div>
+
+      {/* Full Gallery Page View Overlay */}
+      {showFullGallery && (
+        <div style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 99999,
+          background: "#fff",
+          overflowY: "auto",
+          padding: "40px 20px"
+        }}>
+          <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, flexWrap: "wrap", gap: 16 }}>
+              <div>
+                <div className="section-label">Photo Gallery</div>
+                <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.4rem)", color: "#173B5E", margin: 0 }}>
+                  All School <span style={{ color: "#FECC4C" }}>Moments</span>
+                </h2>
+              </div>
+              <button
+                onClick={() => setShowFullGallery(false)}
+                style={{
+                  padding: "10px 24px",
+                  borderRadius: 100,
+                  background: "#FECC4C",
+                  color: "#173B5E",
+                  border: "none",
+                  fontWeight: 800,
+                  fontSize: 14,
+                  cursor: "pointer",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 8,
+                  boxShadow: "0 4px 12px rgba(254,204,76,.35)"
+                }}
+              >
+                ← Back to Website
+              </button>
+            </div>
+
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+              gap: 16,
+              width: "100%"
+            }}>
+              {ALL_GALLERY_PHOTOS.map((g, i) => (
+                <div
+                  key={i}
+                  onClick={() => setSelectedImage(g.img)}
+                  className="gallery-item img-zoom"
+                  style={{
+                    borderRadius: 18,
+                    overflow: "hidden",
+                    position: "relative",
+                    boxShadow: "0 4px 16px rgba(23,59,94,.08)",
+                    aspectRatio: "4/3",
+                    cursor: "pointer"
+                  }}
+                >
+                  <img src={g.img} alt="Gallery photo" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Lightbox Modal Popup for Enlarged Photo View */}
+      {selectedImage && (
+        <div
+          onClick={() => setSelectedImage(null)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 999999,
+            background: "rgba(10, 25, 41, 0.88)",
+            backdropFilter: "blur(6px)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "20px"
+          }}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            aria-label="Close"
+            style={{
+              position: "absolute",
+              top: 24,
+              right: 24,
+              width: 44,
+              height: 44,
+              borderRadius: "50%",
+              background: "rgba(255, 255, 255, 0.2)",
+              border: "1px solid rgba(255, 255, 255, 0.4)",
+              color: "#fff",
+              fontSize: 22,
+              fontWeight: 800,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              transition: "all .2s ease",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
+            }}
+          >
+            ✕
+          </button>
+          <img
+            src={selectedImage}
+            alt="Enlarged photo view"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: "92vw",
+              maxHeight: "88vh",
+              objectFit: "contain",
+              borderRadius: 16,
+              boxShadow: "0 24px 60px rgba(0,0,0,0.6)",
+              display: "block"
+            }}
+          />
+        </div>
+      )}
     </Section>
   );
 }
