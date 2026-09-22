@@ -396,12 +396,12 @@ const TESTIMONIALS = [
 ];
 
 const NOTICES = [
-  { date: "10 Sep 2026", cat: "Admissions", catC: "#D97706 bg-amber-50",   title: "Admissions Open 2026–27",            desc: "Open for Nursery to Class 5. Limited seats — enquire today." },
-  { date: "05 Sep 2026", cat: "Events",     catC: "#2563EB bg-blue-50",    title: "Annual Cultural Day — Oct 15",        desc: "Music, dance, drama and celebrations for the whole family." },
-  { date: "28 Aug 2026", cat: "Holiday",    catC: "#7C3AED bg-purple-50",  title: "Durga Puja Holiday Notice",           desc: "School closed Oct 1–10. Classes resume Oct 11, 2026." },
-  { date: "20 Aug 2026", cat: "Meeting",    catC: "#059669 bg-emerald-50", title: "Parent-Teacher Meeting — Sep 25",     desc: "All parents are warmly requested to attend." },
+  { date: "10 Sep 2026", cat: "Admissions", catC: "#D97706 bg-amber-50",   title: "Admissions Open ",            desc: "Open for Nursery to Class 5. Limited seats — enquire today." },
+  { date: "05 Sep 2026", cat: "Events",     catC: "#2563EB bg-blue-50",    title: "Annual Cultural Day ",        desc: "Music, dance, drama and celebrations for the whole family." },
+  { date: "28 Aug 2026", cat: "Holiday",    catC: "#7C3AED bg-purple-50",  title: "Durga Puja Holiday Notice",           desc: "School closed on government vacations" },
+  { date: "20 Aug 2026", cat: "Meeting",    catC: "#059669 bg-emerald-50", title: "Parent-Teacher Meeting ",     desc: "All parents are warmly requested to attend." },
   { date: "15 Aug 2026", cat: "Award",      catC: "#D97706 bg-amber-50",   title: "Abacus Championship Winners 🏆",     desc: "Our students won 3 gold medals at the District Championship!" },
-  { date: "10 Aug 2026", cat: "Exams",      catC: "#DC2626 bg-red-50",     title: "Annual Exam Schedule Released",       desc: "Exam timetable for Classes 1–4 now available at the office." },
+  { date: "10 Aug 2026", cat: "Exams",      catC: "#DC2626 bg-red-50",     title: "Annual Exam Schedule Released",       desc: "Exam timetable for Classes 1–5 is now available at the office." },
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -915,7 +915,6 @@ function BeyondAcademics() {
                 <div style={{ fontWeight: 800, fontSize: 15, color: "#fff", marginBottom: 4 }}>{a.title}</div>
                 <div style={{ fontSize: 13, color: "#94B8D4", fontWeight: 500 }}>{a.desc}</div>
               </div>
-              <div style={{ color: "#FECC4C", opacity: .7, marginTop: 4 }}><Ic.ArrowRight /></div>
             </div>
           ))}
         </div>
@@ -1735,14 +1734,11 @@ function Notices() {
     <section style={{ background: "#FFF9ED", position: "relative", overflow: "hidden" }}>
       <WaveTop fill="#fff" />
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "60px 20px 70px" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", marginBottom: 32, flexWrap: "wrap", gap: 14 }}>
-          <div className="reveal">
-            <div className="section-label">School Updates</div>
-            <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.4rem)", color: "#173B5E" }}>
-              Latest School <span style={{ color: "#FECC4C" }}>Updates</span>
-            </h2>
-          </div>
-          <button className="btn-outline reveal" style={{ padding: "9px 20px", fontSize: 13 }}>View All Notices</button>
+        <div className="reveal" style={{ marginBottom: 32 }}>
+          <div className="section-label">School Updates</div>
+          <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.4rem)", color: "#173B5E" }}>
+            Latest School <span style={{ color: "#FECC4C" }}>Updates</span>
+          </h2>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,240px),1fr))", gap: 16 }}>
@@ -1754,7 +1750,6 @@ function Notices() {
                   <span style={{ padding: "4px 10px", borderRadius: 100, fontSize: 11, fontWeight: 800, color: textC, background: bgC }}>
                     {n.cat}
                   </span>
-                  <span style={{ fontSize: 11, color: "#B0BAC9", fontWeight: 600 }}>{n.date}</span>
                 </div>
                 <h3 style={{ fontWeight: 800, fontSize: 15, color: "#173B5E", marginBottom: 8, lineHeight: 1.4 }}>{n.title}</h3>
                 <p style={{ fontSize: 13, color: "#6B7280", lineHeight: 1.65, marginBottom: 12, fontWeight: 500 }}>{n.desc}</p>
@@ -1777,8 +1772,8 @@ function Notices() {
 function Contact() {
   const info = [
     { icon: <Ic.Pin />,   label: "Address",      val: "Payradanga, West Bengal, India" },
-    { icon: <Ic.Phone />, label: "Phone",         val: "+91 9433176984" },
-    { icon: <Ic.Mail />,  label: "Email",         val: "rkchildrenparadise@gmail.com" },
+    { icon: <Ic.Phone />, label: "Phone",         val: "+91 9433176984", href: "tel:+919433176984" },
+    { icon: <Ic.Mail />,  label: "Email",         val: "rkchildrenparadise@gmail.com", href: "mailto:rkchildrenparadise@gmail.com" },
     { icon: <Ic.Clock />, label: "School Hours",  val: "Mon – Sat: 8:00 AM – 2:00 PM" },
   ];
 
@@ -1801,7 +1796,18 @@ function Contact() {
                   </div>
                   <div>
                     <div style={{ fontSize: 11, fontWeight: 700, color: "#9CA3AF", textTransform: "uppercase", letterSpacing: ".06em", marginBottom: 2 }}>{it.label}</div>
-                    <div style={{ fontSize: 14, fontWeight: 600, color: "#173B5E", wordBreak: "break-word" }}>{it.val}</div>
+                    {it.href ? (
+                      <a
+                        href={it.href}
+                        style={{ fontSize: 14, fontWeight: 600, color: "#173B5E", wordBreak: "break-word", textDecoration: "none", transition: "color .2s" }}
+                        onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#D97706"}
+                        onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#173B5E"}
+                      >
+                        {it.val}
+                      </a>
+                    ) : (
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "#173B5E", wordBreak: "break-word" }}>{it.val}</div>
+                    )}
                   </div>
                 </div>
               ))}
@@ -1881,13 +1887,31 @@ function Footer() {
               A joyful, safe and nurturing learning environment for children from Nursery to Class 5 in Payradanga, West Bengal.
             </p>
             <div style={{ display: "flex", gap: 8 }}>
-              {["📘", "📸", "🐦", "▶️"].map((ic, i) => (
-                <button key={i} style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(255,255,255,.08)", border: "none", cursor: "pointer", fontSize: 15, display: "flex", alignItems: "center", justifyContent: "center", transition: "background .2s" }}
-                  onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,.16)"}
-                  onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,.08)"}>
-                  {ic}
-                </button>
-              ))}
+              <a
+                href="https://www.facebook.com/share/1DBjMtKdCt/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook Page"
+                title="Follow us on Facebook"
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: 10,
+                  background: "rgba(255,255,255,.08)",
+                  color: "#fff",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  textDecoration: "none",
+                  transition: "background .2s"
+                }}
+                onMouseEnter={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,.16)"}
+                onMouseLeave={e => (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,.08)"}
+              >
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -1920,19 +1944,43 @@ function Footer() {
             <div style={{ fontWeight: 800, fontSize: 13, color: "#FECC4C", marginBottom: 16, textTransform: "uppercase", letterSpacing: ".08em" }}>Contact</div>
             {[
               { icon: <Ic.Pin />, v: "Payradanga, West Bengal, India" },
-              { icon: <Ic.Phone />, v: "+91 9433176984" },
-              { icon: <Ic.Mail />, v: "rkchildrenparadise@gmail.com" },
+              { icon: <Ic.Phone />, v: "+91 9433176984", href: "tel:+919433176984" },
+              { icon: <Ic.Mail />, v: "rkchildrenparadise@gmail.com", href: "mailto:rkchildrenparadise@gmail.com" },
             ].map((c, i) => (
               <div key={i} style={{ display: "flex", alignItems: "flex-start", gap: 10, marginBottom: 12, color: "#6B8FAA" }}>
                 <span style={{ marginTop: 1, flexShrink: 0 }}>{c.icon}</span>
-                <span style={{ fontSize: 13, fontWeight: 500 }}>{c.v}</span>
+                {c.href ? (
+                  <a
+                    href={c.href}
+                    style={{ fontSize: 13, fontWeight: 500, color: "#6B8FAA", textDecoration: "none", transition: "color .2s" }}
+                    onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FECC4C"}
+                    onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "#6B8FAA"}
+                  >
+                    {c.v}
+                  </a>
+                ) : (
+                  <span style={{ fontSize: 13, fontWeight: 500 }}>{c.v}</span>
+                )}
               </div>
             ))}
           </div>
         </div>
 
         <div style={{ borderTop: "1px solid rgba(255,255,255,.08)", paddingTop: 24, display: "flex", flexWrap: "wrap", gap: 12, justifyContent: "space-between", alignItems: "center" }}>
-          <p style={{ fontSize: 13, color: "#4A6580" }}>© 2026 Sign Art Creations. All Rights Reserved.</p>
+          <p style={{ fontSize: 13, color: "#4A6580" }}>
+            © 2026{" "}
+            <a
+              href="https://www.signartcreations.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "inherit", textDecoration: "none", transition: "color .2s" }}
+              onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = "#FECC4C"}
+              onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = "inherit"}
+            >
+              Sign Art Creations
+            </a>
+            . All Rights Reserved.
+          </p>
           <p style={{ fontSize: 13, color: "#4A6580" }}>Made with ❤️ for the children of R.K. Children Paradise Payradanga</p>
         </div>
       </div>
