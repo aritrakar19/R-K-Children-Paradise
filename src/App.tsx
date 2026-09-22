@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import heroImg from "./assets/hero_section_photo.jpeg";
 import about1Img from "./assets/about_1.jpeg";
 import about2Img from "./assets/about_2.jpeg";
@@ -11,6 +12,19 @@ import musicDanceImg from "./assets/music&dance.jpg";
 import groupReadingImg from "./assets/group_reading.jpeg";
 import culturalEventsImg from "./assets/cultural_events.jpg";
 import sportsPtImg from "./assets/sports&pt.png";
+import artsDrawingImg from "./assets/arts_drawing.jpg";
+import artsCraftImg from "./assets/arts_craft.jpg";
+import artsMusicImg from "./assets/arts_music.jpg";
+import artsDanceImg from "./assets/arts_dance.jpg";
+import artsDramaImg from "./assets/arts_drama.jpg";
+import tcr1Img from "./assets/tcr_1.jpeg";
+import tcr2Img from "./assets/tcr_2.jpeg";
+import tcr3Img from "./assets/tcr_3.jpeg";
+import tcr4Img from "./assets/tcr_4.jpeg";
+import tcr5Img from "./assets/tcr_5.jpeg";
+import tcr6Img from "./assets/tcr_6.jpeg";
+import tcr7Img from "./assets/tcr_7.jpeg";
+import tcr8Img from "./assets/tcr_8.jpeg";
 import gallery1Img from "./assets/gallery_1.jpeg";
 import gallery2Img from "./assets/gallery_2.jpg";
 import gallery3Img from "./assets/gallery_3.jpeg";
@@ -59,6 +73,7 @@ import gallery45Img from "./assets/gallery_45.jpeg";
 import gallery46Img from "./assets/gallery_46.jpeg";
 import gallery47Img from "./assets/gallery_47.jpeg";
 import gallery48Img from "./assets/gallery_48.jpeg";
+import gallery50Img from "./assets/gallery_50.png";
 
 /* ═══════════════════════════════════════════════════════════════
    ICONS
@@ -170,6 +185,14 @@ function useCounter(target: number, started: boolean, duration = 1800) {
   return val;
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 /* ═══════════════════════════════════════════════════════════════
    SVG WAVES
 ═══════════════════════════════════════════════════════════════ */
@@ -275,11 +298,11 @@ const SMART_FEATURES = [
 ];
 
 const ARTS = [
-  { emoji: "🎨", title: "Drawing",       img: "https://images.unsplash.com/photo-1614712201488-9942af86b87b?w=500&h=360&fit=crop&auto=format", c: "#FFF4CC" },
-  { emoji: "🖌️", title: "Art & Craft",  img: "https://images.unsplash.com/photo-1560421683-6856ea585c78?w=500&h=360&fit=crop&auto=format", c: "#F3F0FF" },
-  { emoji: "🎵", title: "Music",         img: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=500&h=360&fit=crop&auto=format", c: "#EAF5FF" },
-  { emoji: "💃", title: "Dance",         img: "https://images.unsplash.com/photo-1667386421763-277f20ae165b?w=500&h=360&fit=crop&auto=format", c: "#FFE8F0" },
-  { emoji: "🎭", title: "Drama",         img: "https://images.unsplash.com/photo-1667384443065-b15c7caa4160?w=500&h=360&fit=crop&auto=format", c: "#ECFDF5" },
+  { emoji: "🎨", title: "Drawing",       img: artsDrawingImg, c: "#FFF4CC" },
+  { emoji: "🖌️", title: "Art & Craft",  img: artsCraftImg,   c: "#F3F0FF" },
+  { emoji: "🎵", title: "Music",         img: artsMusicImg,   c: "#EAF5FF" },
+  { emoji: "💃", title: "Dance",         img: artsDanceImg,   c: "#FFE8F0" },
+  { emoji: "🎭", title: "Drama",         img: artsDramaImg,   c: "#ECFDF5" },
 ];
 
 const SPORTS_TAGS = ["⚽ Sports", "🤸 Physical Training", "🏃 Outdoor Activities", "🤝 Teamwork", "📋 Discipline", "🧘 Healthy Habits"];
@@ -291,10 +314,14 @@ const SAFETY_CARDS = [
 ];
 
 const TEACHERS = [
-  { name: "Priya Ghosh",    role: "Head Teacher",     sub: "English & Communication", img: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=420&h=420&fit=crop&auto=format&face=1" },
-  { name: "Ritu Sharma",    role: "Primary Teacher",  sub: "Mathematics & Abacus",    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=420&h=420&fit=crop&auto=format" },
-  { name: "Arun Kumar",     role: "PT & Sports",      sub: "Physical Education",      img: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=420&h=420&fit=crop&auto=format" },
-  { name: "Meena Das",      role: "Arts Teacher",     sub: "Drawing, Art & Craft",    img: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?w=420&h=420&fit=crop&auto=format" },
+  { name: "Mita Kar",      role: "Head Teacher", img: tcr1Img },
+  { name: "Alpona Das",      role: "Primary Teacher",   sub: "Bengali",    img: tcr2Img },
+  { name: "Ankita Debnath",       role: "Primary Teacher",    sub: "Bengali",      img: tcr3Img },
+  { name: "Chitrolekha Biswas",        role: "Primary Teacher",       sub: "Mathematics & Geography",    img: tcr4Img },
+  { name: "Tarnishtha Das",       role: "Primary Teacher",sub: "Mathematics & Songs",  img: tcr5Img },
+  { name: "Srijita Das",   role: "Primary Teacher",    sub: "English & Drawing",   img: tcr6Img },
+  { name: "Trisha Das", role: "Primary Teacher",    sub: "English",    img: tcr7Img },
+  { name: "Adrija Dey",       role: "Primary Teacher",  sub: "Abacus & Spoken English", img: tcr8Img },
 ];
 
 const SCHOOL_LIFE = [
@@ -358,6 +385,7 @@ const ALL_GALLERY_PHOTOS = [
   { img: gallery46Img, label: "Gallery Photo 46" },
   { img: gallery47Img, label: "Gallery Photo 47" },
   { img: gallery48Img, label: "Gallery Photo 48" },
+  { img: gallery50Img, label: "Gallery Photo 50" },
 ];
 
 const TESTIMONIALS = [
@@ -1069,26 +1097,71 @@ function Safety() {
    TEACHERS
 ═══════════════════════════════════════════════════════════════ */
 function Teachers() {
+  const doubledTeachers = [...TEACHERS, ...TEACHERS];
+
   return (
-    <Section bg="#fff">
+    <Section bg="#fff" style={{ overflow: "hidden" }}>
+      <style>{`
+        @keyframes educatorsMarquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .educators-marquee-container {
+          overflow: hidden;
+          width: 100%;
+          position: relative;
+          mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+          padding: 12px 0 24px;
+        }
+        .educators-marquee-track {
+          display: flex;
+          gap: 20px;
+          width: max-content;
+          animation: educatorsMarquee 28s linear infinite;
+          will-change: transform;
+        }
+        .educators-marquee-container:hover .educators-marquee-track {
+          animation-play-state: paused;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .educators-marquee-track {
+            animation: none;
+          }
+        }
+      `}</style>
       <SectionHead
         label="Our Educators"
         heading={<>Meet Our <span style={{ color: "#FECC4C" }}>Caring Educators</span></>}
         sub="Dedicated, experienced and passionate about helping every child reach their potential."
       />
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,210px),1fr))", gap: 18 }}>
-        {TEACHERS.map((t, i) => (
-          <div key={i} className="card-lift reveal" style={{ background: "#fff", borderRadius: 22, overflow: "hidden", boxShadow: "0 6px 24px rgba(23,59,94,.09)", border: "1px solid rgba(23,59,94,.06)", transitionDelay: `${i * 80}ms` }}>
-            <div className="img-zoom" style={{ aspectRatio: "1/1", overflow: "hidden" }}>
-              <img src={t.img} alt={t.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      <div className="educators-marquee-container">
+        <div className="educators-marquee-track">
+          {doubledTeachers.map((t, i) => (
+            <div
+              key={i}
+              className="card-lift"
+              style={{
+                width: 240,
+                flexShrink: 0,
+                background: "#fff",
+                borderRadius: 22,
+                overflow: "hidden",
+                boxShadow: "0 6px 24px rgba(23,59,94,.09)",
+                border: "1px solid rgba(23,59,94,.06)",
+              }}
+            >
+              <div className="img-zoom" style={{ aspectRatio: "1/1", overflow: "hidden" }}>
+                <img src={t.img} alt={t.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
+              </div>
+              <div style={{ padding: "16px 16px", textAlign: "center" }}>
+                <h3 style={{ fontWeight: 800, fontSize: 15, color: "#173B5E", marginBottom: 3 }}>{t.name}</h3>
+                <div style={{ fontSize: 12, fontWeight: 700, color: "#FECC4C", marginBottom: 3 }}>{t.role}</div>
+                <div style={{ fontSize: 12, color: "#9CA3AF", fontWeight: 500 }}>{t.sub}</div>
+              </div>
             </div>
-            <div style={{ padding: "16px 16px", textAlign: "center" }}>
-              <h3 style={{ fontWeight: 800, fontSize: 15, color: "#173B5E", marginBottom: 3 }}>{t.name}</h3>
-              <div style={{ fontSize: 12, fontWeight: 700, color: "#FECC4C", marginBottom: 3 }}>{t.role}</div>
-              <div style={{ fontSize: 12, color: "#9CA3AF", fontWeight: 500 }}>{t.sub}</div>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </Section>
   );
@@ -1133,10 +1206,9 @@ function SchoolLifeSection() {
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   GALLERY
+   GALLERY SECTION (HOME PAGE PREVIEW)
 ═══════════════════════════════════════════════════════════════ */
-function Gallery() {
-  const [showFullGallery, setShowFullGallery] = useState(false);
+function GallerySection() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
@@ -1209,8 +1281,8 @@ function Gallery() {
 
       {/* View All Photos Button */}
       <div style={{ textAlign: "center", marginTop: 32 }}>
-        <button
-          onClick={() => setShowFullGallery(true)}
+        <Link
+          to="/gallery"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -1224,80 +1296,14 @@ function Gallery() {
             border: "none",
             cursor: "pointer",
             boxShadow: "0 6px 20px rgba(23,59,94,.18)",
-            transition: "all .2s ease"
+            transition: "all .2s ease",
+            textDecoration: "none"
           }}
         >
           <span>View All Photos</span>
           <Ic.ArrowRight size={16} />
-        </button>
+        </Link>
       </div>
-
-      {/* Full Gallery Page View Overlay */}
-      {showFullGallery && (
-        <div style={{
-          position: "fixed",
-          inset: 0,
-          zIndex: 99999,
-          background: "#fff",
-          overflowY: "auto",
-          padding: "40px 20px"
-        }}>
-          <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, flexWrap: "wrap", gap: 16 }}>
-              <div>
-                <div className="section-label">Photo Gallery</div>
-                <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.4rem)", color: "#173B5E", margin: 0 }}>
-                  All School <span style={{ color: "#FECC4C" }}>Moments</span>
-                </h2>
-              </div>
-              <button
-                onClick={() => setShowFullGallery(false)}
-                style={{
-                  padding: "10px 24px",
-                  borderRadius: 100,
-                  background: "#FECC4C",
-                  color: "#173B5E",
-                  border: "none",
-                  fontWeight: 800,
-                  fontSize: 14,
-                  cursor: "pointer",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 8,
-                  boxShadow: "0 4px 12px rgba(254,204,76,.35)"
-                }}
-              >
-                ← Back to Website
-              </button>
-            </div>
-
-            <div style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-              gap: 16,
-              width: "100%"
-            }}>
-              {ALL_GALLERY_PHOTOS.map((g, i) => (
-                <div
-                  key={i}
-                  onClick={() => setSelectedImage(g.img)}
-                  className="gallery-item img-zoom"
-                  style={{
-                    borderRadius: 18,
-                    overflow: "hidden",
-                    position: "relative",
-                    boxShadow: "0 4px 16px rgba(23,59,94,.08)",
-                    aspectRatio: "4/3",
-                    cursor: "pointer"
-                  }}
-                >
-                  <img src={g.img} alt="Gallery photo" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Lightbox Modal Popup for Enlarged Photo View */}
       {selectedImage && (
@@ -1356,6 +1362,145 @@ function Gallery() {
         </div>
       )}
     </Section>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FULL GALLERY PAGE (/gallery ROUTE)
+═══════════════════════════════════════════════════════════════ */
+function GalleryPage() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  useReveal();
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setSelectedImage(null);
+    };
+    if (selectedImage) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImage]);
+
+  return (
+    <div style={{
+      minHeight: "100vh",
+      background: "#fff",
+      padding: "40px 20px"
+    }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 32, flexWrap: "wrap", gap: 16 }}>
+          <div>
+            <div className="section-label">Photo Gallery</div>
+            <h2 style={{ fontSize: "clamp(1.6rem,3vw,2.4rem)", color: "#173B5E", margin: 0 }}>
+              All School <span style={{ color: "#FECC4C" }}>Moments</span>
+            </h2>
+          </div>
+          <Link
+            to="/"
+            style={{
+              padding: "10px 24px",
+              borderRadius: 100,
+              background: "#FECC4C",
+              color: "#173B5E",
+              border: "none",
+              fontWeight: 800,
+              fontSize: 14,
+              cursor: "pointer",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              boxShadow: "0 4px 12px rgba(254,204,76,.35)",
+              textDecoration: "none"
+            }}
+          >
+            ← Back to Website
+          </Link>
+        </div>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+          gap: 16,
+          width: "100%"
+        }}>
+          {ALL_GALLERY_PHOTOS.map((g, i) => (
+            <div
+              key={i}
+              onClick={() => setSelectedImage(g.img)}
+              className="gallery-item img-zoom"
+              style={{
+                borderRadius: 18,
+                overflow: "hidden",
+                position: "relative",
+                boxShadow: "0 4px 16px rgba(23,59,94,.08)",
+                aspectRatio: "4/3",
+                cursor: "pointer"
+              }}
+            >
+              <img src={g.img} alt="Gallery photo" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Lightbox Modal Popup for Enlarged Photo View */}
+      {selectedImage && (
+        <div
+          onClick={() => setSelectedImage(null)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 999999,
+            background: "rgba(10, 25, 41, 0.88)",
+            backdropFilter: "blur(6px)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "20px"
+          }}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            aria-label="Close"
+            style={{
+              position: "absolute",
+              top: 24,
+              right: 24,
+              width: 44,
+              height: 44,
+              borderRadius: "50%",
+              background: "rgba(255, 255, 255, 0.2)",
+              border: "1px solid rgba(255, 255, 255, 0.4)",
+              color: "#fff",
+              fontSize: 22,
+              fontWeight: 800,
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              transition: "all .2s ease",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.3)"
+            }}
+          >
+            ✕
+          </button>
+          <img
+            src={selectedImage}
+            alt="Enlarged photo view"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: "92vw",
+              maxHeight: "88vh",
+              objectFit: "contain",
+              borderRadius: 16,
+              boxShadow: "0 24px 60px rgba(0,0,0,0.6)",
+              display: "block"
+            }}
+          />
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -1798,7 +1943,10 @@ function Footer() {
 /* ═══════════════════════════════════════════════════════════════
    APP ROOT
 ═══════════════════════════════════════════════════════════════ */
-export default function App() {
+/* ═══════════════════════════════════════════════════════════════
+   APP ROOT & ROUTING
+═══════════════════════════════════════════════════════════════ */
+function HomePage() {
   useReveal();
 
   return (
@@ -1818,7 +1966,7 @@ export default function App() {
       <Safety />
       <Teachers />
       <SchoolLifeSection />
-      <Gallery />
+      <GallerySection />
       <AdmissionCTA />
       <AdmissionForm />
       <Testimonials />
@@ -1826,5 +1974,18 @@ export default function App() {
       <Contact />
       <Footer />
     </>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
