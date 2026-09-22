@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
+import logoImg from "./assets/logo.png";
 import heroImg from "./assets/hero_section_photo.jpeg";
 import about1Img from "./assets/about_1.jpeg";
 import about2Img from "./assets/about_2.jpeg";
@@ -467,9 +468,18 @@ function Navbar() {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", display: "flex", alignItems: "center", justifyContent: "space-between", height: 72 }}>
         {/* Logo */}
         <a href="#home" onClick={() => setActive("Home")} style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}>
-          <div style={{ width: 44, height: 44, borderRadius: 14, background: "linear-gradient(135deg,#FECC4C,#F5B800)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, boxShadow: "0 4px 14px rgba(254,204,76,.4)" }}>
-            🏫
-          </div>
+          <img
+            src={logoImg}
+            alt="R.K. Children Paradise Logo"
+            style={{
+              height: 48,
+              width: "auto",
+              objectFit: "contain",
+              flexShrink: 0,
+              mixBlendMode: "multiply",
+              display: "block",
+            }}
+          />
           <div>
             <div style={{ fontWeight: 900, fontSize: 16, color: "#173B5E", lineHeight: 1.1 }}>R.K. Children</div>
             <div style={{ fontWeight: 900, fontSize: 16, color: "#FECC4C", lineHeight: 1.1 }}>Paradise</div>
@@ -1876,8 +1886,18 @@ function Footer() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))", gap: 36, marginBottom: 48 }}>
           {/* Brand */}
           <div style={{ gridColumn: "span 1" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-              <div style={{ width: 46, height: 46, borderRadius: 14, background: "#FECC4C", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22 }}>🏫</div>
+            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+              <img
+                src={logoImg}
+                alt="R.K. Children Paradise Logo"
+                style={{
+                  height: 48,
+                  width: "auto",
+                  objectFit: "contain",
+                  flexShrink: 0,
+                  display: "block",
+                }}
+              />
               <div>
                 <div style={{ fontWeight: 900, fontSize: 15, color: "#fff", lineHeight: 1.1 }}>R.K. Children</div>
                 <div style={{ fontWeight: 900, fontSize: 15, color: "#FECC4C", lineHeight: 1.1 }}>Paradise</div>
