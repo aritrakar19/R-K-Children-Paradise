@@ -527,6 +527,250 @@ function Navbar() {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   SCHOOL IMAGE INTRO SECTION (gallery_50-HXEbTAsL.png)
+═══════════════════════════════════════════════════════════════ */
+function SchoolIntroSection() {
+  return (
+    <section
+      id="school-intro"
+      data-asset="gallery_50-HXEbTAsL.png"
+      aria-label="Welcome to R.K. Children Paradise"
+      style={{
+        position: "relative",
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        paddingTop: 72,
+        backgroundImage: `url(${gallery50Img})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Semi-transparent dark overlay for high readability while keeping school image visible */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background: "linear-gradient(180deg, rgba(16, 47, 74, 0.72) 0%, rgba(23, 59, 94, 0.62) 50%, rgba(16, 47, 74, 0.82) 100%)",
+          backdropFilter: "blur(1px)",
+          WebkitBackdropFilter: "blur(1px)",
+          zIndex: 1,
+        }}
+      />
+
+      {/* Prominently centered content */}
+      <div
+        style={{
+          position: "relative",
+          zIndex: 2,
+          maxWidth: 960,
+          margin: "0 auto",
+          padding: "48px 24px 72px",
+          textAlign: "center",
+          animation: "fadeUp .8s ease both",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        {/* Established badge */}
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 8,
+            padding: "8px 20px",
+            borderRadius: 100,
+            background: "rgba(254, 204, 76, 0.18)",
+            border: "1px solid rgba(254, 204, 76, 0.45)",
+            color: "#FECC4C",
+            fontSize: "clamp(12px, 1.8vw, 14px)",
+            fontWeight: 800,
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
+            marginBottom: 20,
+            backdropFilter: "blur(4px)",
+            WebkitBackdropFilter: "blur(4px)",
+          }}
+        >
+          <span>🏫</span> Welcome to Our Campus · Estd. 1984
+        </div>
+
+        {/* Prominent School Name */}
+        <h1
+          style={{
+            fontSize: "clamp(2.4rem, 6vw, 4.6rem)",
+            fontWeight: 900,
+            color: "#FFFFFF",
+            lineHeight: 1.12,
+            letterSpacing: "-0.02em",
+            marginBottom: 20,
+            textShadow: "0 4px 24px rgba(0, 0, 0, 0.5)",
+          }}
+        >
+          R.K. Children <span style={{ color: "#FECC4C" }}>Paradise</span>
+        </h1>
+
+        {/* Elegant Subtitle */}
+        <p
+          style={{
+            fontSize: "clamp(1rem, 2.2vw, 1.25rem)",
+            color: "rgba(255, 255, 255, 0.94)",
+            maxWidth: 680,
+            lineHeight: 1.65,
+            fontWeight: 500,
+            marginBottom: 36,
+            textShadow: "0 2px 12px rgba(0, 0, 0, 0.45)",
+          }}
+        >
+          A joyful, safe and nurturing learning environment where little minds grow into big dreams.
+        </p>
+
+        {/* Action Buttons */}
+        <div
+          style={{
+            display: "flex",
+            gap: 16,
+            justifyContent: "center",
+            flexWrap: "wrap",
+            alignItems: "center",
+          }}
+        >
+          <a
+            href="#home"
+            className="btn-primary"
+            style={{
+              fontSize: 15,
+              padding: "13px 30px",
+              boxShadow: "0 8px 24px rgba(254,204,76,0.35)",
+            }}
+          >
+            Explore School <Ic.ArrowRight size={16} />
+          </a>
+          <a
+            href="#admissions"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+              padding: "13px 28px",
+              borderRadius: 100,
+              fontSize: 15,
+              fontWeight: 700,
+              color: "#FFFFFF",
+              background: "rgba(255, 255, 255, 0.14)",
+              border: "1px solid rgba(255, 255, 255, 0.35)",
+              backdropFilter: "blur(8px)",
+              WebkitBackdropFilter: "blur(8px)",
+              textDecoration: "none",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "rgba(255, 255, 255, 0.24)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(255, 255, 255, 0.6)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLElement).style.background = "rgba(255, 255, 255, 0.14)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(255, 255, 255, 0.35)";
+            }}
+          >
+            Admission Enquiry
+          </a>
+        </div>
+      </div>
+
+      {/* Subtle bottom scroll prompt (positioned above curved transition) */}
+      <a
+        href="#home"
+        aria-label="Scroll to school highlights"
+        style={{
+          position: "absolute",
+          bottom: "clamp(60px, 8vw, 88px)",
+          left: "50%",
+          transform: "translateX(-50%)",
+          color: "rgba(255, 255, 255, 0.8)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 6,
+          textDecoration: "none",
+          fontSize: 12,
+          fontWeight: 700,
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
+          zIndex: 4,
+          transition: "color 0.2s",
+        }}
+        onMouseEnter={(e) => {
+          (e.currentTarget as HTMLElement).style.color = "#FFFFFF";
+        }}
+        onMouseLeave={(e) => {
+          (e.currentTarget as HTMLElement).style.color = "rgba(255, 255, 255, 0.8)";
+        }}
+      >
+        <span>Scroll Down</span>
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          style={{ animation: "float 2s ease-in-out infinite" }}
+        >
+          <path d="M7 10l5 5 5-5" />
+        </svg>
+      </a>
+
+      {/* Visual Curved Wave Transition to Hero Section */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: -1,
+          left: 0,
+          right: 0,
+          width: "100%",
+          overflow: "hidden",
+          lineHeight: 0,
+          zIndex: 3,
+          pointerEvents: "none",
+        }}
+      >
+        <svg
+          viewBox="0 0 1440 90"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          style={{
+            width: "100%",
+            height: "clamp(46px, 6vw, 80px)",
+            display: "block",
+          }}
+        >
+          {/* Subtle golden accent curve */}
+          <path
+            d="M0,68 C340,68 460,16 720,16 C980,16 1100,68 1440,68 L1440,90 L0,90 Z"
+            fill="#FECC4C"
+            opacity="0.85"
+          />
+          {/* Main cream transition curve flowing seamlessly into Hero background */}
+          <path
+            d="M0,74 C340,74 460,24 720,24 C980,24 1100,74 1440,74 L1440,90 L0,90 Z"
+            fill="#FFFDF7"
+          />
+        </svg>
+      </div>
+    </section>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════
    HERO
 ═══════════════════════════════════════════════════════════════ */
 function Hero() {
@@ -2021,6 +2265,7 @@ function HomePage() {
     <>
       <style>{heroGridCSS}</style>
       <Navbar />
+      <SchoolIntroSection />
       <Hero />
       <TrustBar />
       <StatsStrip />
