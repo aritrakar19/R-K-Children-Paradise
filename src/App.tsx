@@ -2028,7 +2028,7 @@ function Contact() {
     { icon: <Ic.Pin />,   label: "Address",      val: "Payradanga, West Bengal, India" },
     { icon: <Ic.Phone />, label: "Phone",         val: "+91 9433176984", href: "tel:+919433176984" },
     { icon: <Ic.Mail />,  label: "Email",         val: "rkchildrenparadise@gmail.com", href: "mailto:rkchildrenparadise@gmail.com" },
-    { icon: <Ic.Clock />, label: "School Hours",  val: "Mon – Sat: 8:00 AM – 2:00 PM" },
+    { icon: <Ic.Clock />, label: "School Hours",  val: "Mon – Fri: 8:00 AM – 2:00 PM" },
   ];
 
   return (
